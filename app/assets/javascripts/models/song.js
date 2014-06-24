@@ -1,3 +1,4 @@
 var Song = Backbone.Model.extend({
-	url : 'api/songs/'
+	urlRoot : 'api/songs/',
+	idAttribute: '_id'
 });

@@ -6,6 +6,6 @@ var SongsRouter = Backbone.Router.extend({
 	home : function() {
 		var searchView = new Enque.Views.SearchView();
 		searchView.render();
-		$('#container').html(searchView.el);
+		$('#container').prepend(searchView.el);
 	}
 });

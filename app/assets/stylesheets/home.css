@@ -1,0 +1,63 @@
+.top5 {margin-top: 5px;}
+.top10 {margin-top: 10px;}
+.top20 {margin-top: 20px;}
+
+.song{
+	margin-top: 5%;
+	color: white;	
+	padding-top: 5%;
+	padding-bottom: 7%;
+	border-bottom : #ec7063 solid 1px;
+}
+
+/*.song {
+	margin-top: 5%;
+	color: white;	
+	padding-top: 5%;
+	padding-bottom: 7%;
+	border-bottom : #ec7063 solid 1px;	
+}*/
+
+.playlist-song{
+	margin-top: 5%;
+	color: white;	
+	padding-top: 5%;
+	padding-bottom: 7%;
+	border-bottom : #48c9b0 solid 1px;
+}
+
+
+#search {
+	font-size : 150%;
+	border : black;
+	border-bottom: #48c9b0 solid 5px ;
+	padding-top : 1%;
+	padding-bottom : 1%;
+	background: transparent;
+}
+
+#search-icon{
+	margin-top : 20%;
+	padding-top : 2%;
+	padding-bottom : 1%;
+	color : white;
+}
+
+.icon-hover{
+	color: #48c9b0;
+}
+
+.playlist-icon-hover{
+	color: #ec7063;	
+}
+
+#icon-bg{
+	background : #ec7063;
+	height : 5.8rem;
+	border-bottom : #48c9b0 solid 5px ;
+
+}
+
+ul{
+list-style-type: none;
+}

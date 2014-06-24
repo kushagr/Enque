@@ -3,8 +3,11 @@ Enque::Application.routes.draw do
   resources :home
   namespace :api, defaults: {format: :json} do
     get "/songs/search" => "songs#search"
+    resources :songs
     resources :users
-    resources :playlists
+    resources :playlists do
+      get "/songs" => "songs#index"
+    end
   end
 
 
@@ -12,7 +15,7 @@ Enque::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+    # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

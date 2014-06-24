@@ -4,6 +4,7 @@ class Song
 
 	field :name
 	field :url
+	field :image_url
+	field :video_id
 	belongs_to :playlist
-
 end
