@@ -50,6 +50,7 @@ GEM
       ejs
       jquery-rails
       railties
+    bcrypt (3.1.7)
     bson (2.3.0)
     bson_ext (1.5.1)
     builder (3.1.4)
@@ -64,6 +65,12 @@ GEM
     connection_pool (2.0.0)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     eco (1.0.0)
       coffee-script
       eco-source
@@ -116,6 +123,7 @@ GEM
       rack (~> 1.2)
     optionable (0.2.0)
     origin (2.1.1)
+    orm_adapter (0.5.0)
     polyglot (0.3.5)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -178,6 +186,8 @@ GEM
     uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     webmock (1.18.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -199,6 +209,7 @@ DEPENDENCIES
   backbone-on-rails
   bson_ext
   coffee-rails (~> 4.0.0)
+  devise
   font-awesome-rails
   handlebars_assets
   jbuilder (~> 1.2)

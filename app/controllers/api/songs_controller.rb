@@ -1,6 +1,8 @@
 module Api
 	class SongsController < ApplicationController
 
+		respond_to :json
+
 		def index
 			if params[:playlist_id]
 				playlist = Playlist.find(params[:playlist_id]);
@@ -18,7 +20,7 @@ module Api
   		end
 
 		def search
-			response = youtube_client.videos_by(:query => params[:q], :page => 1, :per_page => 20)
+			response = youtube_client.videos_by(:query => params[:q], :page => 1, :per_page => 15)
 			respond_with response
 		end
 
@@ -29,7 +31,7 @@ module Api
 		end
 
 		def params_song
-		  params.require(:song).permit(:name,:url,:playlist_id,:video_id)
+		  params.require(:song).permit(:name,:url,:playlist_id,:video_id,:image_url)
 		end  
 
 	end

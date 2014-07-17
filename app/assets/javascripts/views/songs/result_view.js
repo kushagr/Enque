@@ -24,10 +24,9 @@ Enque.Views.ResultView = Backbone.View.extend({
 		$(event.currentTarget).parent().slideUp('fast');
 		var playlist_id = $('#playlist').attr('data-id');
 		var song = new Song({name : this.model.get('title'),url : this.model.get('player_url'),	playlist_id : playlist_id, video_id : this.model.get('unique_id'),image_url : this.model.get('thumbnails')[1].url});
-		song.save();
 		var playlist = new Playlist([],{playlist_id : playlist_id});
 		playlist.set('id',playlist_id);
-		playlist.push(song);
+		playlist.create(song);
 		playlist.fetch({success : this.renderPlaylist});
 	},
 
@@ -46,13 +45,13 @@ Enque.Views.ResultView = Backbone.View.extend({
 		$(event.currentTarget).removeClass('icon-hover');
 	},
 
-	// addIcon : function(event){
-	// 	$(event.currentTarget).closest("p").addClass('hide-icon');	
-	// },
+	addIcon : function(event){
+		$(event.currentTarget).closest("p").addClass('hide-icon');	
+	},
 
-	// removeIcon : function(event){
-	// 	$(event.currentTarget).closest('p').removeClass('hide-icon');	
-	// }
+	removeIcon : function(event){
+		$(event.currentTarget).closest('p').removeClass('hide-icon');	
+	}
 
 
 });

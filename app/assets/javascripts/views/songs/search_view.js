@@ -17,10 +17,6 @@ Enque.Views.SearchView = Backbone.View.extend({
 		this.getPlaylist();
 		var query = this.$('[name=q]').val();
 		var searchResults = new SongSearch([],{query : query});
-		searchResults.on("fetch",function(){
-			alert('hello');
-			$('#results-list').html('<i class="fa fa-spinner fa-spin fa-4x"></i>');
-		},this);
 		searchResults.fetch({ success : this.renderResults });
 	},
 
@@ -40,6 +36,4 @@ Enque.Views.SearchView = Backbone.View.extend({
 		playlistView.render();
 		$('#playlist').html(playlistView.el);
 	}
-
-
 });

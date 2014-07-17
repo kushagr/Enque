@@ -1,17 +1,44 @@
 
-<div id='container'>
+<div id='app'>
 	<div class="row">
 		<div id="player_view" class="col-lg-12 col-lg-offset-1">
-			
+			<div id="player">
+
+			</div>
+		</div>
+	</div>
+	</br>
+	</br>
+	<div class="row">
+		<div id="search-view">
+
 		</div>
 	</div>
 	<div class="row">
-		<div id="results-list" class="col-lg-6">
+		<div id="results-list">
 
 		</div>
-
-		<div id="playlist" class="col-lg-6" data-id="<%= @playlist.id %>">
+	</div>
+	<div class="row">
+		<div id="playlist"  data-id="<%= @playlist.id %>">
 
 		</div>
 	</div>
 </div>
+
+
+    <script type="text/javascript">
+     var tag = document.createElement('script');
+     tag.src = "https://www.youtube.com/iframe_api";
+     var firstScriptTag = document.getElementsByTagName('script')[0];
+     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+     function onYouTubeIframeAPIReady(){
+       Enque.player = new Enque.Views.PlayerView();
+       Enque.player.render();
+       console.log(Enque.player.player); 
+     }
+
+     $('#player').hide();
+
+    </script>

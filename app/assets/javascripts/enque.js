@@ -5,6 +5,7 @@ window.Enque = {
   Routers: {},
   initialize: function() {
     new SongsRouter();
+    new PlaylistRouter();
     Backbone.history.start();
   }
 };

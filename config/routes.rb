@@ -1,5 +1,7 @@
 Enque::Application.routes.draw do
 
+  root 'home#index'
+  devise_for :users
   resources :home
   namespace :api, defaults: {format: :json} do
     get "/songs/search" => "songs#search"

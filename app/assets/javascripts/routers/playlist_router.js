@@ -1,9 +1,9 @@
-var SongsRouter = Backbone.Router.extend({
+var PlaylistRouter = Backbone.Router.extend({
 	routes : {
-		'' : 'home'
+		'playlists/new' : 'new'
 	},
 
-	home : function() {
+	new : function() {
 		var searchView = new Enque.Views.SearchView();
 		searchView.render();
 		$('#search-view').html(searchView.el);
