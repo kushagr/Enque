@@ -66,7 +66,7 @@
 
 #icon-bg{
 	background : #ec7063;
-	height : 5.1rem;
+	height : 5.3rem;
 	border : #48c9b0;
 	border-bottom : #48c9b0 solid 5px ;
 }
@@ -139,13 +139,13 @@ ul{
 
 a.nav-expander {
   background: none repeat scroll 0 0 #000000;
-  color: #FFFFFF;
+  color: #58d68d;
   display: block;
   font-size: 15px;
   font-weight: 400;
   height: 50px;
   margin-right: 0;
-  padding: 1em 1.6em 2em;
+  padding: 2em 1.6em 2em;
   position: absolute;
   right: 0;
   text-decoration: none;
@@ -206,11 +206,43 @@ body.nav-expanded {
   -o-transition: right 0.4s ease-in-out 0s;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 #nav-close {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 300;
   font-size: 24px;
   padding-right: 10px;
+}
+
+#logo{
+  margin-top : 10rem !important;
+}
+
+/*center align logo*/
+.navbar-header {
+    float: left;
+    padding-top: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-brand { 
+  float: none; 
+}
+.navbar-main{
+  margin-top: 2.5rem;
+}
+
+.
+.navbar-nav>li>a {
+  margin-bottom : 2.5rem;
+}
+
+#logo{
+  margin-right: 12rem;
 }
 
 

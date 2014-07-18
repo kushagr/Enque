@@ -1,13 +1,10 @@
 module Api
 	class SongsController < ApplicationController
-
 		respond_to :json
 
 		def index
-			if params[:playlist_id]
-				playlist = Playlist.find(params[:playlist_id]);
-				respond_with playlist.songs
-			end			
+			playlist = Playlist.fetch(params)
+			respond_with playlist.songs
 		end
 			
 		def create
@@ -29,10 +26,9 @@ module Api
 			song.destroy
 			respond_with :status => 200
 		end
-
+		
 		def params_song
-		  params.require(:song).permit(:name,:url,:playlist_id,:video_id,:image_url)
+		  	params.require(:song).permit(:name,:url,:playlist_id,:video_id,:image_url)
 		end  
-
 	end
 end

@@ -10,12 +10,6 @@ Enque.Views.SongView = Backbone.View.extend({
 		'click #play-icon' : 'playVideo'
 	},
 
-	initialize : function() {
-		Handlebars.registerHelper('trimString', function(passedString) {
-		    var theString = passedString.substring(0,50);
-		    return new Handlebars.SafeString(theString)
-		});		
-	},
 
 	render : function() {
 		this.$el.html(this.template(this.model.toJSON()));
